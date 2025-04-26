@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    /* Cores */
+    --bg-color: #e9e7e7;
+    --branco: #fff;
+    --preto: #000;
+    --tx-destaque: #04ADBF;
+    --borda: #0D7F8C;
+
+    /* Fonte */
+    --titulo: "Inter", sans-serif;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+
+/*============================ Header ==========================*/
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.header{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+   
+}
+
+.header .logo .bx.bxs-plane-alt.branco{
+    max-width: 40px;
+    font-size: 3rem;
+    color: var(--branco);
+}
+
+
+/* Menu Desktop */
+.menu-desktop ul{
+    display: flex;
+    gap: 4rem;
+}
+
+.menu-desktop{
+    margin-left: 5rem;
+}
+
+.menu-desktop a{
+    display: inline-block;
+    color: var(--branco);
+}
+
+.menu-desktop nav a:hover{
+    border-bottom: 1px solid var(--borda);
+    transform: scale(1.07);
+    transition: 0.2s;
+}
+
+.btn-contato button{
+    width: 150px;
+    height: 50px;
+}
+
+.btn-contato button, .inicio button{
+    color: var(--branco);
+    cursor: pointer;
+    border: 1px solid var(--branco);
+    background: transparent;
+}
+
+.btn-contato button:hover,.inicio button:hover{
+    background-color: var(--branco);
+    color: var(--tx-destaque);
+    transition: 0.3s;
+}
+
+
+/* Menu dinamico */
+
+.bx.bxs-plane-alt.preto{
+    display: none;
+}
+
+header.rolar{
+    background-color: var(--branco);
+    padding: 3px 0;
+    box-shadow: 0px 0px 10px #00000071;
+    transition: all 0.5s ease;
+}
+
+header.rolar .menu-desktop a{
+    color: var(--preto);
+}
+
+header.rolar .btn-contato button{
+    border: 1px solid var(--preto);
+    color: var(--preto);
+}
+
+header.rolar .btn-contato button:hover{
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+header.rolar .bx.bxs-plane-alt.preto{
+    max-width: 40px;
+    font-size: 3rem;
+    color: var(--preto);
+    display: block;
+}
+
+header.rolar .bx.bxs-plane-alt.branco{
+    display: none;
+}
+/* ======= */
+
+
+/* ==== Menu Mobile ==== */
+
+/* Botão */
+.btn-menu-mob{
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 101;
+}
+
+.btn-menu-mob div{
+    background-color: var(--branco);
+    height: 3px;
+    margin: 10px 10px;
+    transition: 0.2s ease;
+}
+
+.btn-menu-mob .line-menu-mob-1{
+    width: 30px;
+}
+
+.btn-menu-mob .line-menu-mob-2{
+    width: 20px;
+}
+
+header.rolar .btn-menu-mob div{
+    background-color: var(--preto);
+}
+
+.btn-menu-mob .line-menu-mob-1.ativo1{
+    transform: rotate(45deg) translate(30%);
+    background-color: var(--branco);
+}
+
+.btn-menu-mob .line-menu-mob-2.ativo2{
+    width: 30px;
+    transform: rotate(-45deg) translate(30%);
+    background-color: var(--branco);
+}
+
+/* Links */
+.menu-mobile{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background-color: #000000ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.menu-mobile nav{
+    width: 100%;
+}
+
+.menu-mobile a{
+    display: block;
+    font-size: 1.3rem;
+    color: var(--branco);
+    padding: 0.7rem 0;
+    transition: 0.2s;
+}
+
+.menu-mobile a:hover{
+    background-color: var(--branco);
+    color: var(--preto);
+    box-shadow: 0 0 20px var(--branco);
+}
+
+.menu-mobile.abrir{
+    width: 100%;
+    height: 100vh;
+}
+
+body.no-overflow{
+    overflow: hidden;
+}
+/* =========== */
+
+
+/*===================================== Introdução do site ===================================*/
+.inicio{
+    height: 120vh;
+    background-image: url("https://images.pexels.com/photos/615060/pexels-photo-615060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    color: var(--branco);
+}
+
+.inicio .interface{
+    width: 100%;
+    height: 107%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inicio-txt h1{
+    font-family: var(--titulo);
+    font-size: 4em;
+    line-height: 3.5rem;
+}
+
+.inicio-txt h1 span{
+    display: block;
+    color: var(--tx-destaque);
+}
+
+.inicio-txt p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.inicio button{
+    height: 50px;
+    width: 230px;
+    font-size: 20px;
+}
+
+/*================================ Seção Vantagens =================================*/
+.vantagens{
+    margin: 4rem auto;
+}
+
+.vantagens .interface{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.conteiner{
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 90%;
+    position: relative;
+}
+
+.conteiner span{
+    color: var(--preto);
+    font-weight: 300;
+}
+
+.conteiner img{
+    border-radius: 10px;
+    margin: 0 2rem;
+    box-shadow: 5px 5px 0 #fa4700;
+}
+
+.conteiner .rig{
+    float: right;
+}
+
+.conteiner .lef{
+    float: left;
+}
+
+.conteiner-info{
+    text-align: start;
+    align-items: center;
+    padding: 1rem;
+    margin: 0  2rem;
+}
+
+.conteiner-info h3{
+    color: var(--tx-destaque);
+    font-family: var(--titulo);
+    font-size: 30px;
+}
+
+.conteiner-info p{
+    font-size: 16px;
+}
+
+/*============================= Seção Contato ================================*/
+.contato{
+    background-color: var(--branco);
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+.cont-txt, .icons-btn{
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: middle;
+}
+
+.cont-txt h2{
+    font-family: var(--titulo);
+    color: var(--tx-destaque);
+    line-height: 2.8rem;
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+}
+
+.cont-txt span{
+    color: var(--preto);
+    display: block;
+    font-weight: 300;
+}
+
+.cont-txt p{
+    font-size: 16px;
+}
+
+.icons-btn button{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 50%;
+    margin: 0.5rem auto;
+    font-size: 16px;
+    padding: 0 2rem;
+    background: transparent;
+    border: 2px solid var(--preto);
+}
+
+.icons-btn button i {
+    font-size: 1.7rem;
+}
+
+.icons-btn button:hover{
+    background-color: var(--preto);
+    color: var(--branco);
+    transform: translateX(-10px);
+    transition: 0.2s ease;
+}
+
+/*============================ Seção hotéis =============================== */
+
+.hoteis{
+    background-image: url("https://images.pexels.com/photos/261169/pexels-photo-261169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+    position: relative;
+    border-radius: 10%;
+}
+
+.hoteis > .shadow{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: #00000088;
+    border-radius: 10%;
+}
+
+.hoteis > .interface{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.hoteis .interface h3{
+    font-family: var(--titulo);
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    color: var(--branco);
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.hoteis .interface p{
+    color: var(--branco);
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.hoteis .interface span{
+    color: var(--tx-destaque);
+    display: block;
+    font-weight: 600;
+}
+
+.hoteis button{
+    height: 60px;
+    width: 180px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+/*============================= Seção Sobre ===========================*/
+
+.sobre{
+    padding: 3rem 0;
+    margin: 3rem auto;
+    width: 100%;
+}
+
+.titulo, .sobre-cards{
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+.titulo{
+    position: sticky;
+    top: 50%;
+}
+
+.titulo h3{
+    text-align: center;
+    font-family: var(--titulo);
+    font-size: 3em;
+    line-height: 3.5rem;
+    font-weight: 300;
+}
+
+.titulo span{
+    color: var(--tx-destaque);
+    display: block;
+    font-weight: 700;
+}
+
+.sobre-cards .box{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 2px solid var(--borda);
+}
+
+.box i{
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.box h4{
+    font-size: 25px;
+}
+
+.box p{
+    font-size: 16px;
+}
+
+/* ==================== Footer ======================== */
+footer{
+    background-color: var(--preto);
+    color: var(--branco);
+    width: 100%;
+    padding: 2rem 0 0;
+    text-align: center;
+}
+
+.top-footer button{
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--branco);
+    background: transparent;
+    color: var(--branco);
+    font-size: 2rem;
+    margin: 0px 10px;
+    transition: 0.3s ease;
+}
+
+.top-footer button:hover{
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+.meio-footer{
+    margin: 20px 0;
+}
+
+.meio-footer a{
+    color: var(--branco);
+    margin-left: 10px;
+}
+
+.final-footer{
+    border-top: 1px solid var(--branco);
+    padding: 5px;
+
+}

@@ -1,0 +1,167 @@
+/* CSS Responsivo */
+
+@media screen and (max-width: 970px){
+   /* Responsivo do contato */
+    .contato{
+        padding: 3rem;
+    }    
+}
+
+
+@media screen and (max-width: 900px){
+
+    /* Responsivo do menu */
+    header .menu-desktop, header .btn-contato{
+        display: none;
+    }
+
+    /* Menu Mobile */
+    .btn-menu-mob{
+        display: block;
+    }
+
+    /* Responsivo do contato */
+    .cont-txt, .icons-btn{
+        display: block;
+        width: 100%;
+    }
+
+    .cont-txt{
+        text-align: center;
+    }
+
+    .cont-txt h2{
+        line-height: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cont-txt p{
+        margin-bottom: 1rem;
+    }
+
+    .icons-btn button{
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 850px){
+    /* Responsivo das Vantagens */
+    .conteiner{
+        max-width: 100%;
+    }
+    
+    .conteiner .conteiner-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .conteiner-info h3{
+        margin-bottom: 1rem;
+        line-height: 35px;
+    }
+}
+
+
+
+@media screen and (max-width: 780px){
+
+    /* Responsivo do início */
+    .inicio-txt h1{
+       text-align: left;
+    }
+    
+    .inicio-txt p{
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .inicio button{
+        height: 50px;
+        width: 230px;
+        font-size: 20px;
+    }
+
+    /* Responsivo das Vantagens */
+    
+    .conteiner-info h3{
+        line-height: 30px;
+    }
+    
+    .conteiner-info p{
+        margin-top: 0.2rem;
+        line-height: 20px;
+    }
+
+    /* Responsivo do Como Funciona */
+
+    .titulo, .sobre-cards{
+        display: block;
+        width: 100%;
+    }
+    
+    .titulo{
+        position: static;
+    }
+    
+    .titulo h3{
+        line-height: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .box i{
+        font-size: 4rem;
+    }
+    
+    .box p{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 720px){
+    /* Responsivo das vantagens */
+
+    .conteiner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .conteiner-info {
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+}
+
+
+
+@media screen and (max-width: 600px){
+
+     /* Responsivo do inicio */
+     .inicio{
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+
+    /* Responsivo da hospedagem */
+
+    .hoteis{
+        border-radius: 0;
+    }
+
+    .hoteis > .shadow{
+        border-radius: 0;
+    }
+
+    .hoteis button{
+        width: 200px;
+    } 
+}
